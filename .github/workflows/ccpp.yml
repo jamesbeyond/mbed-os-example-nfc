@@ -10,9 +10,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    container: mbedos/mbed-os-env:stable
     steps:
-    - uses: mbedos/mbed-os-env@stable
     - name: configure
       run: mbed deploy
     - name: build
