@@ -13,8 +13,6 @@ jobs:
     container: mbedos/mbed-os-env:stable
     steps:
     - name: configure
-      run: |
-        ls -al
-        pwd
+      run: ls -al
     - name: build
-      run: mbed compile -t GCC_ARM -m K64F
+      run: p[wd
