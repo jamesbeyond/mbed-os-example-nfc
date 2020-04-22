@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: mbedos/mbed-os-env:stable
+    - uses: mbedos/mbed-os-env@stable
     - name: configure
       run: mbed deploy
     - name: build
