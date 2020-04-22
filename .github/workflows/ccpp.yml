@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     container: mbedos/mbed-os-env:stable
     steps:
+    - uses: actions/checkout@v2 
     - name: configure
       run: ls -al
     - name: build
