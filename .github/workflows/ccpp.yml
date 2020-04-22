@@ -9,10 +9,10 @@ on:
 jobs:
   build:
 
-    runs-on: mbedos/mbed-os-env:stable
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: mbedos/mbed-os-env:stable
     - name: configure
       run: mbed deploy
     - name: build
