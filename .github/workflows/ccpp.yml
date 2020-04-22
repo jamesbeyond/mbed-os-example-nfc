@@ -15,4 +15,4 @@ jobs:
     - name: configure
       run: ls -al
     - name: build
-      run: p[wd
+      run: pwd
