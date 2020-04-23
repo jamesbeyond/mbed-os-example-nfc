@@ -14,8 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2 
     - name: configure
-      run: mbed deploy
-    - name: build
       run: |
-        cd NFC_EEPROM
-        mbed compile -t GCC_ARM -m DISCO_L475VG_IOT01A
+        git clone https://github.com/ARMmbed/mbed-os.git
+        mkdir BUILD
+        for i in NFC_* ; do cd $i ; ln -s $PWD/../mbed-os mbed-os ; ln -s $PWD/../BUILD BUILD ; cd .. ; done
+    - name: build
+      run: for i in NFC_* ; do cd $i ; mbed update ; mbed compile -t GCC_ARM -m DISCO_L475VG_IOT01A || break ; cd .. ; done
