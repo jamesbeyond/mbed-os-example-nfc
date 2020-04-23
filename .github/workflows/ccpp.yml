@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2 
     - name: configure
-      run: ls -al
-    - name: build
       run: pwd
+    - name: build
+      run: ls -al
