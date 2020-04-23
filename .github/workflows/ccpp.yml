@@ -14,6 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2 
     - name: configure
-      run: pwd
+      run: mbed deploy
     - name: build
-      run: ls -al
+      run: |
+        cd NFC_EEPROM
+        mbed compile -t GCC_ARM -m DISCO_L475VG_IOT01A
